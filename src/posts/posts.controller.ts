@@ -25,6 +25,11 @@ export default class PostsController {
     return this.postsService.getPostById(Number(id));
   }
 
+  /**
+   * A beneficial thing about NestJS controllers is that they handle asynchronous errors very well.
+   * If the  getPostById function throws an error, NestJS catches it automatically and parses it. When using pure Express, we would do this ourselves:
+   */
+
   @Post()
   async createPost(@Body() post: CreatePostDto) {
     return this.postsService.createPost(post);

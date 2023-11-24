@@ -17,6 +17,7 @@ import { StaffModule } from './staff/staff.module';
         POSTGRES_USER: Joi.string().required(),
         POSTGRES_PASSWORD: Joi.string().required(),
         POSTGRES_DB: Joi.string().required(),
+        POSTGRES_URL: Joi.string(),
         PORT: Joi.number(),
       }),
     }),
@@ -29,6 +30,7 @@ import { StaffModule } from './staff/staff.module';
 export class AppModule {}
 
 /**
+ *
  * A crucial thing to running our application is to set up environment variables. *
  * In NestJS, we have a  ConfigModule that we can use in our application. It uses dotenv under the hood.
  * As soon as we create a .env file at the root of our application, NestJS injects them into a ConfigSerivice that we will use soon.

@@ -16,10 +16,13 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         database: configService.get('POSTGRES_DB'),
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         synchronize: true,
+        ssl: true,
+        // url: configService.get(`POSTGRES_URL`),
       }),
     }),
   ],
 })
+
 export class DatabaseModule {}
 
 /**

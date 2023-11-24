@@ -3,6 +3,7 @@ import { Post } from './post.interface';
 import { UpdatePostDto } from './dto/updatePost.dto';
 import { CreatePostDto } from './dto/createPost.dto';
 
+//A job of a service is to separate the business logic from controllers, making it cleaner and more comfortable to test.
 @Injectable()
 export default class PostsService {
   private lastPostId = 0;

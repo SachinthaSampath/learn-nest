@@ -3,5 +3,5 @@ export class UpdateUserDto {
   name: string;
   username: string;
   email: string;
-  hash: string;
+  password: string;
 }
